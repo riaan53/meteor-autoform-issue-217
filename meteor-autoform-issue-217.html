@@ -1,0 +1,11 @@
+<head>
+  <title>test</title>
+</head>
+
+<body>
+  {{> insertBookForm}}
+</body>
+
+<template name="insertBookForm">
+  {{> quickForm collection="Books" schema="BookSchema" id="insertBookForm" type="insert"}}
+</template>
