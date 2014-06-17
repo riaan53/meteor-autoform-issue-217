@@ -28,7 +28,7 @@ Books = new Meteor.Collection("books", {
     }
 });
 
-//Schema with summary removed and lastCheckedOut made required.
+//Schema with summary removed and summary made required.
 BookSchema = new SimpleSchema({
       title: {
         type: String,
@@ -44,8 +44,9 @@ BookSchema = new SimpleSchema({
         label: "Number of copies",
         min: 0
       },
-      lastCheckedOut: {
-        type: Date,
-        label: "Last date this book was checked out",
-      }
+      summary: {
+        type: String,
+        label: "Brief summary",
+        max: 1000
+        }
 });

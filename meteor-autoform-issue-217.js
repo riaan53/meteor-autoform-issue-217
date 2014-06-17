@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-    AutoForm.addHooks(['insertBookForm','insertBookForm2'], {
+    AutoForm.addHooks(['insertBookForm'], {
     after: {
       insert: function(error, result) {
         if (error) {
@@ -8,16 +8,6 @@ if (Meteor.isClient) {
           console.log("Insert Result:", result);
 
         }
-      },
-      update: function(error) {
-        if (error) {
-          console.log("Update Error:", error);
-        } else {
-          console.log("Updated!");
-        }
-      },
-      remove: function(error) {
-        console.log("Remove Error:", error);
       }
     }
   });
